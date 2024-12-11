@@ -14,7 +14,7 @@
 
 ### **另一个小站**
 
-[**イルミネーション**](https://fuyukivila.xyz/)
+[**イルミネーション**](https://fuyuki.vercel.app/)
 
 <script>
 function secondToDate(second) {
