@@ -70,7 +70,7 @@ export const profileConfig: ProfileConfig = {
     {
       name: 'イルミネーション',
       icon: 'fa6-solid:blog',
-      url: 'https://fuyukivila.xyz/',
+      url: 'https://hikari.fuyuki.fun/',
     },
   ],
 }
