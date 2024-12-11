@@ -51,7 +51,7 @@ export const navBarConfig: NavBarConfig = {
 }
 
 export const profileConfig: ProfileConfig = {
-  avatar: 'assets/images/avatar.png',  // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+  avatar: 'https://s2.loli.net/2024/12/11/y82jlxJGn5SDCpI.png',  // Relative to the /src directory. Relative to the /public directory if it starts with '/'
   name: 'Fuyuki_Vila',
   bio: 'Haru La Fuyuki',
   links: [
