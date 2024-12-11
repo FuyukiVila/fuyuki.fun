@@ -65,7 +65,7 @@ export const profileConfig: ProfileConfig = {
     {
       name: 'GitHub',
       icon: 'fa6-brands:github',
-      url: 'https://github.com/FuyukiVila/fuwari',
+      url: 'https://github.com/FuyukiVila',
     },
     {
       name: 'イルミネーション',
