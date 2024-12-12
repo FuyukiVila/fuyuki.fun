@@ -14,6 +14,7 @@ try {
                     live2d_settings['waifuSize'] = '336x300';
                     live2d_settings['waifuFontSize'] = '14px';
                     live2d_settings['showToolMenu'] = false;
+                    live2d_settings['waifuDraggable'] = 'unlimited';
                     /* 在 initModel 前添加 */
                     initModel(waifu_tips);
                 }
