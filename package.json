@@ -31,6 +31,7 @@
     "@sveltejs/vite-plugin-svelte": "^4.0.0",
     "@swup/astro": "^1.4.1",
     "@tailwindcss/typography": "^0.5.15",
+    "@vercel/analytics": "^1.4.1",
     "@vercel/speed-insights": "^1.1.0",
     "astro": "^4.16.13",
     "astro-compress": "^2.3.5",
