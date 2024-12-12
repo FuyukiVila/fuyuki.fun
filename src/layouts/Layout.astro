@@ -19,6 +19,7 @@ import { defaultFavicons } from '../constants/icon'
 import type { Favicon } from '../types/config'
 import { url, pathsEqual } from '../utils/url-utils'
 import Analytics from '@vercel/analytics/astro'
+import SpeedInsights  from "@vercel/speed-insights/astro"
 
 interface Props {
   title?: string
@@ -154,8 +155,9 @@ const bannerOffset =
         onload="renderMathInElement(document.body);"></script>
 
 		<link rel="alternate" type="application/rss+xml" title={profileConfig.name} href={`${Astro.site}rss.xml`}/>
-		
+
 		<Analytics />
+		<SpeedInsights />
 	</head>
 	<body class=" min-h-screen transition " class:list={[{"lg:is-home": isHomePage, "enable-banner": enableBanner}]}
 		  data-overlayscrollbars-initialize
@@ -540,4 +542,7 @@ if (window.swup) {
 } else {
 	document.addEventListener("swup:enable", setup)
 }
+
+import "../scripts/live2d.js"
+import "../scripts/power.js"
 </script>
