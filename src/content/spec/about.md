@@ -2,7 +2,7 @@
 
 ### **关于 Blog**
 
-本站从 [**2024.12.9**](https://time.is/zh/) 至今已经运行 <span id="htmer_time" style="color: #90CAF9; font-weight: bold;"></span>
+本站从 [**2024.12.9**](https://time.is/zh/) 至今已经运行了 <span id="htmer_time" style="color: #90CAF9; font-weight: bold;"></span>
 
 本站使用开源静态网页生成工具 [Astro](https://astro.build/)，主题使用 saicaca 提供的 [fuwari](https://github.com/saicaca/fuwari)
 
