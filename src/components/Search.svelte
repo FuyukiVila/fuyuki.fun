@@ -62,7 +62,7 @@ onMount(() => {
 })
 
 const togglePanel = () => {
-  let panel = document.getElementById('search-panel')
+  const panel = document.getElementById('search-panel')
   panel?.classList.toggle('float-panel-closed')
 }
 

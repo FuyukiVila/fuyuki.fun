@@ -32,10 +32,11 @@ function setTime() {
     const create_time = Math.round(new Date(Date.UTC(2024, 11, 9, 0, 0, 0)).getTime() / 1000); // 当前时间秒数,增加时区的差异
     const timestamp = Math.round((new Date().getTime() + 8 * 60 * 60 * 1000) / 1000);
     const currentTime = secondToDate((timestamp - create_time));
+    let currentTimeHtml;
     if (currentTime[0] === 0) {
-        const currentTimeHtml = `${currentTime[1]}天${currentTime[2]}时${currentTime[3]}分${currentTime[4]}秒`;
+        currentTimeHtml = `${currentTime[1]}天${currentTime[2]}时${currentTime[3]}分${currentTime[4]}秒`;
     } else {
-        const currentTimeHtml = `${currentTime[0]}年${currentTime[1]}天${currentTime[2]}时${currentTime[3]}分${currentTime[4]}秒`;
+        currentTimeHtml = `${currentTime[0]}年${currentTime[1]}天${currentTime[2]}时${currentTime[3]}分${currentTime[4]}秒`;
     }
     // 兼容pjax，当htmer_time存在时输出，否则清空计时器
     if (document.getElementById("htmer_time")) {
