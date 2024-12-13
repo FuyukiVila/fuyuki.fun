@@ -1,3 +1,4 @@
+let timer = null;
 function secondToDate(second) {
     if (!second) {
         return [0, 0, 0, 0, 0];
@@ -38,12 +39,9 @@ function setTime() {
     } else {
         currentTimeHtml = `${currentTime[0]}年${currentTime[1]}天${currentTime[2]}时${currentTime[3]}分${currentTime[4]}秒`;
     }
-    // 兼容pjax，当htmer_time存在时输出，否则清空计时器
-    if (document.getElementById("htmer_time")) {
-        document.getElementById("htmer_time").innerHTML = currentTimeHtml;
-    } else {
-        clearInterval(timer);
-    }
+    document.getElementById("htmer_time").innerHTML = currentTimeHtml;
 }
 
-const timer = setInterval(setTime, 1000);
+if (timer === null) {
+    timer = setInterval(setTime, 1000);
+}
