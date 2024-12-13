@@ -27,7 +27,7 @@
     "@iconify-json/fa6-solid": "^1.2.2",
     "@iconify-json/material-symbols": "^1.2.10",
     "@iconify/svelte": "^4.1.0",
-    "@sveltejs/vite-plugin-svelte": "^5.0.2",
+    "@sveltejs/vite-plugin-svelte": "^4.0.3",
     "@swup/astro": "^1.5.0",
     "@tailwindcss/typography": "^0.5.15",
     "astro": "^4.16.17",
