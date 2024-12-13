@@ -41,6 +41,9 @@ importers:
       '@iconify-json/material-symbols':
         specifier: ^1.2.10
         version: 1.2.10
+      '@iconify-json/ri':
+        specifier: ^1.2.3
+        version: 1.2.3
       '@iconify/svelte':
         specifier: ^4.1.0
         version: 4.1.0(svelte@5.12.0)
@@ -1035,6 +1038,9 @@ packages:
 
   '@iconify-json/material-symbols@1.2.10':
     resolution: {integrity: sha512-GcZxhOFStM7Dk/oZvJSaW0tR/k6NwTq+KDzYgCNBDg52ktZuRa/gkjRiYooJm/8PAe9NBYxIx8XjS/wi4sasdQ==}
+
+  '@iconify-json/ri@1.2.3':
+    resolution: {integrity: sha512-UVKofd5xkSevGd5K01pvO4NWsu+2C9spu+GxnMZUYymUiaWmpCAxtd22MFSpm6MGf0MP4GCwhDCo1Q8L8oZ9wg==}
 
   '@iconify/svelte@4.1.0':
     resolution: {integrity: sha512-6oLonIDZHXPcQa9ZKbJocaOUMOV+ALeGPVDfex/lwdlHRNUxtJzI6pu121SaoVoXpRGSAYXB/VCv/MuYzCjn5w==}
@@ -6000,6 +6006,10 @@ snapshots:
       '@iconify/types': 2.0.0
 
   '@iconify-json/material-symbols@1.2.10':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/ri@1.2.3':
     dependencies:
       '@iconify/types': 2.0.0
 
