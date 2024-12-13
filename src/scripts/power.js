@@ -1,4 +1,4 @@
-var a_idx = 0;
+let a_idx = 0;
 jQuery(document).ready(function ($) {
     $("body").click(function (e) {
         var a = new Array("Ciallo～(∠·ω< )⌒★");
