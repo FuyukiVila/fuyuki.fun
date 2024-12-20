@@ -1,7 +1,7 @@
 ---
 title: ArchWsl的一些注意事项和技巧
 published: 2024-12-19
-description: ''
+description: 'ArchWsl的一些注意事项和技巧'
 image: ''
 tags: [WSL, Arch, wslg]
 category: 'Linux'
