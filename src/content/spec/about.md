@@ -1,4 +1,9 @@
-> **Yuki snowed the night.**
+> **Yuki snows the night.**
+> **but the white is not as pure as it had been.**
+> **Hikari illuminates the world.**
+> **but the light is not as bright as it had been.**
+
+![moe-counter](https://count.getloli.com/@fuyuki.fun?theme=booru-lewd)
 
 ### **关于 Blog**
 
