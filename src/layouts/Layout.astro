@@ -192,9 +192,6 @@ const bannerOffset =
       title={profileConfig.name}
       href={`${Astro.site}rss.xml`}
     />
-
-    <script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"
-    ></script>
   </head>
   <body
     class="min-h-screen transition"
@@ -623,7 +620,9 @@ function disableAnimation() {
   } else {
     document.addEventListener("swup:enable", setup);
   }
+</script>
 
-  import "../scripts/power.js";
-  import "../scripts/time.js";
+<script>
+  import "../scripts/power";
+  import "../scripts/time";
 </script>
