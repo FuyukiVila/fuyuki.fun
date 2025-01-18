@@ -70,7 +70,7 @@ export const profileConfig: ProfileConfig = {
     },
     {
       name: "Music",
-      icon: "ri:netease-cloud-music-line",
+      icon: "fa6-solid:music",
       url: "https://music.163.com/#/user/home?id=410193348",
     },
   ],
