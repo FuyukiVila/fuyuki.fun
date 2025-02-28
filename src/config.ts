@@ -11,17 +11,17 @@ export const siteConfig: SiteConfig = {
   subtitle: "ヴぃら",
   lang: "zh_CN", // 'en', 'zh_CN', 'zh_TW', 'ja', 'ko'
   themeColor: {
-    hue: 250, // Default hue for the theme color, from 0 to 360. e.g. red: 0, teal: 200, cyan: 250, pink: 345
+    hue: 0, // Default hue for the theme color, from 0 to 360. e.g. red: 0, teal: 200, cyan: 250, pink: 345
     fixed: false, // Hide the theme color picker for visitors
   },
   banner: {
     enable: true,
-    src: "https://s2.loli.net/2024/12/10/zuACeSQIYOgxDZJ.jpg", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+    src: "assets/images/risayuzuki_banner.png", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
     position: "center", // Equivalent to object-position, only supports 'top', 'center', 'bottom'. 'center' by default
     credit: {
       enable: true, // Display the credit text of the banner image
-      text: "Saclia / YURI", // Credit text to be displayed
-      url: "https://www.pixiv.net/artworks/124648531", // (Optional) URL link to the original artwork or artist's page
+      text: "ゆずりさ", // Credit text to be displayed
+      url: "https://www.yuzu-risa.com/", // (Optional) URL link to the original artwork or artist's page
     },
   },
   toc: {
@@ -31,7 +31,7 @@ export const siteConfig: SiteConfig = {
   favicon: [
     // Leave this array empty to use the default favicon
     {
-      src: "favicon/favicon.png", // Path of the favicon, relative to the /public directory
+      src: "favicon/risayuzuki_favicon.png", // Path of the favicon, relative to the /public directory
       // theme: 'light',              // (Optional) Either 'light' or 'dark', set only if you have different favicons for light and dark mode
       // sizes: '32x32',              // (Optional) Size of the favicon, set only if you have favicons of different sizes
     },
@@ -57,7 +57,7 @@ export const navBarConfig: NavBarConfig = {
 };
 
 export const profileConfig: ProfileConfig = {
-  avatar: "https://s2.loli.net/2024/12/11/y82jlxJGn5SDCpI.png", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+  avatar: "assets/images/risayuzuki_avatar.png", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
   name: "Fuyuki_Vila",
   bio: "Haru La Fuyuki",
   links: [
