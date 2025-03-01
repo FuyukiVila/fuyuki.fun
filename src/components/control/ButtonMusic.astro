@@ -59,8 +59,10 @@
     isPlaying = !isPlaying; // 切换播放状态
   });
 
-  // 页面加载时尝试自动播放音乐
-  document.addEventListener("DOMContentLoaded", () => {
-    autoPlayMusic();
-  });
+  // 监听用户交互事件来触发自动播放
+  document.addEventListener("click", () => {
+    if (!isPlaying) {
+      autoPlayMusic();
+    }
+  }, { once: true });
 </script>
