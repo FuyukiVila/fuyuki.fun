@@ -16,33 +16,43 @@
 </div>
 
 <style>
-    /* 容器样式 */
+    /* 默认样式 */
     .friend-link-item {
-        display: flex; /* 水平排列 */
-        align-items: center; /* 垂直居中对齐 */
-        text-decoration: none; /* 去掉下划线 */
-        font-size: 30px; /* 文字大小 */
-        margin-right: 20px; /* 友链之间的间距 */
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        font-size: 1.5rem; /* 修改为相对单位 */
+        margin-right: 1.25rem;
     }
 
-    /* 图片样式 */
     .friend-link-item img {
-        width: 60px; /* 图片宽度 */
-        height: auto; /* 自动调整高度 */
-        margin-right: 10px; /* 图片与文字之间的间距 */
-        border-radius: 5px; /* 可选：给图片加圆角 */
-        margin: 0; /* 取消外部间距 */
+        width: 3.75rem;
+        height: auto;
+        margin-right: 0.625rem;
+        border-radius: 0.3125rem;
+        margin: 0;
     }
 
     .friend-link-item span {
-        line-height: 1; /* 设置行高为1，避免文字撑高容器 */
-        margin: 0.5em; /* 取消文字的外边距 */
+        line-height: 1;
+        margin: 0.3125em;
     }
 
-    /* 友链容器样式 */
-    .friend-links-container {
-        display: flex; /* 水平排列 */
-        flex-wrap: wrap; /* 允许换行 */
-        gap: 20px; /* 友链之间的间距 */
+    /* 移动端样式 */
+    @media (max-width: 768px) {
+        .friend-link-item {
+            font-size: 1rem;
+            margin-right: 0.5rem;
+        }
+
+        .friend-link-item img {
+            width: 3rem;
+            margin-right: 0.3rem;
+        }
+
+        .friend-link-item span {
+            font-size: 0.9rem;
+            margin: 0.2rem;
+        }
     }
 </style>
