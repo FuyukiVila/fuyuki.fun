@@ -19,6 +19,7 @@ import { defaultFavicons } from '../constants/icon'
 import type { Favicon } from '../types/config'
 import { url, pathsEqual } from '../utils/url-utils'
 import 'katex/dist/katex.css'
+import ButtonMusic from '@components/control/ButtonMusic.astro'
 
 interface Props {
 	title?: string
@@ -538,6 +539,9 @@ if (window.swup) {
 	}
 </script>
 
+<body>
+	<ButtonMusic/>
+</body>
 <script>
   import "../scripts/power";
   import "../scripts/time";

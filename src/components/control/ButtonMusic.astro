@@ -1,0 +1,66 @@
+<div
+  class="fixed bottom-5 left-5 w-12 h-12 bg-[var(--btn-regular-bg)] dark:bg-[var(--btn-content)] text-[var(--btn-content)] text-2xl leading-[3rem] text-center rounded-full cursor-pointer shadow-md hover:shadow-lg transition-transform duration-300 ease-in-out z-[100]"
+  id="musicButton"
+>
+  🎵
+</div>
+
+<audio id="backgroundMusic" loop>
+  <source src="/music/エンドロール・シンドローム.mp3" type="audio/mp3" />
+</audio>
+
+<style>
+  @keyframes spin-slow {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .animate-spin-slow {
+    animation: spin-slow 2s linear infinite;
+  }
+</style>
+
+<script>
+  // 获取DOM元素
+  const musicButton = document.getElementById("musicButton");
+  const backgroundMusic = document.getElementById("backgroundMusic");
+
+  // 初始化播放状态
+  let isPlaying = false;
+
+  // 自动播放音乐
+  function autoPlayMusic() {
+    backgroundMusic
+      .play()
+      .then(() => {
+        isPlaying = true;
+        musicButton.classList.add("animate-spin-slow"); // 使用自定义的慢速旋转动画
+      })
+      .catch((error) => {
+        console.error("自动播放失败:", error);
+      });
+  }
+
+  // 点击事件处理
+  musicButton.addEventListener("click", () => {
+    if (isPlaying) {
+      // 如果正在播放，则暂停
+      backgroundMusic.pause();
+      musicButton.classList.remove("animate-spin-slow"); // 移除旋转动画
+    } else {
+      // 如果已暂停，则继续播放
+      backgroundMusic.play();
+      musicButton.classList.add("animate-spin-slow"); // 添加旋转动画
+    }
+    isPlaying = !isPlaying; // 切换播放状态
+  });
+
+  // 页面加载时尝试自动播放音乐
+  document.addEventListener("DOMContentLoaded", () => {
+    autoPlayMusic();
+  });
+</script>
