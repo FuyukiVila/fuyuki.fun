@@ -10,7 +10,7 @@
 
 # 关于 Blog
 
-本站从 <span style="color: #ff6397; font-weight: bold;">2024.12.9</span> 至今已经运行了 <span id="htmer_time" style="color: #ff6397; font-weight: bold;"></span>
+本站从 <a style="font-weight: bold;">2024.12.9</a> 至今已经运行了 <a id="htmer_time" style="font-weight: bold;"></a>
 
 本站使用开源静态网页生成工具 [Astro](https://astro.build/)，主题使用 saicaca 提供的 [fuwari](https://github.com/saicaca/fuwari)
 
@@ -70,8 +70,7 @@
     .card {
         width: 100%; /* 卡片宽度占满父容器 */
         padding: 15px; /* 内边距保持紧凑 */
-        background-color: #fff;
-        border: 2px solid #ff6397;
+        border: 2px solid;
         border-radius: 10px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         text-align: center;
@@ -81,7 +80,7 @@
     /* 标题样式 */
     .card-title {
         font-size: 1.5rem;
-        color: #ff6397;
+        color: inherit;
         margin-top: 0;
         margin-bottom: 8px;
     }
@@ -89,7 +88,6 @@
     /* 描述文本样式 */
     .card-description {
         font-size: 1rem;
-        color: #333;
         margin-bottom: 10px;
     }
 
