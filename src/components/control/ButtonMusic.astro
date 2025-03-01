@@ -69,14 +69,17 @@
     isPlaying = !isPlaying; // 切换播放状态
   });
 
-  // 监听用户交互事件来触发自动播放
-  document.addEventListener(
-    "click",
-    () => {
-      if (!isPlaying) {
-        autoPlayMusic();
-      }
-    },
-    { once: true }
-  );
+  // 确保事件监听器只被添加一次
+  if (!window.__autoPlayMusicAdded) {
+    document.addEventListener(
+      "click",
+      () => {
+        if (!isPlaying) {
+          autoPlayMusic();
+        }
+      },
+      { once: true }
+    );
+    window.__autoPlayMusicAdded = true;
+  }
 </script>
