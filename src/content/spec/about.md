@@ -50,11 +50,11 @@
     .card-container {
         display: flex; /* 使用Flexbox布局 */
         justify-content: space-between; /* 卡片之间均匀分布 */
-        gap: 20px; /* 设置卡片之间的间距 */
+        gap: 1.25rem; /* 设置卡片之间的间距 */
         flex-wrap: wrap; /* 当屏幕宽度不足时自动换行 */
-        max-width: 1000px; /* 设置最大宽度 */
+        max-width: 62.5rem; /* 设置最大宽度 */
         margin: 0 auto; /* 居中对齐 */
-        padding: 20px; /* 添加一些外边距 */
+        padding: 1.25rem; /* 添加一些外边距 */
     }
 
     /* 卡片链接样式 */
@@ -62,17 +62,17 @@
         text-decoration: none; /* 去掉下划线 */
         color: inherit; /* 继承文字颜色 */
         display: block; /* 让链接块状化 */
-        flex: 1 1 calc(33.33% - 40px); /* 每个卡片占据约三分之一的宽度，减去间距 */
-        min-width: 250px; /* 设置最小宽度，防止卡片过窄 */
+        flex: 1 1 calc(33.33% - 2.5rem); /* 每个卡片占据约三分之一的宽度，减去间距 */
+        min-width: 18rem; /* 设置最小宽度，防止卡片过窄 */
     }
 
     /* 卡片样式 */
     .card {
         width: 100%; /* 卡片宽度占满父容器 */
-        padding: 15px; /* 内边距保持紧凑 */
-        border: 2px solid;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 0.9375rem; /* 内边距保持紧凑 */
+        border: 0.125rem solid;
+        border-radius: 0.625rem;
+        box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
         text-align: center;
         transition: transform 0.3s ease, box-shadow 0.3s ease; /* 添加交互效果 */
     }
@@ -82,31 +82,18 @@
         font-size: 1.5rem;
         color: inherit;
         margin-top: 0;
-        margin-bottom: 8px;
+        margin-bottom: 0.5rem;
     }
 
     /* 描述文本样式 */
     .card-description {
         font-size: 1rem;
-        margin-bottom: 10px;
+        margin-bottom: 0.625rem;
     }
 
     /* 鼠标悬停时的交互效果 */
     .card-link:hover .card {
-        transform: translateY(-5px); /* 向上移动 */
-        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* 加深阴影 */
-    }
-
-    /* 响应式设计：适配平板和手机 */
-    @media (max-width: 768px) {
-        .card-link {
-            flex: 1 1 calc(50% - 20px); /* 每行显示2个卡片 */
-        }
-    }
-
-    @media (max-width: 480px) {
-        .card-link {
-            flex: 1 1 100%; /* 每行显示1个卡片 */
-        }
+        transform: translateY(-0.3125rem); /* 向上移动 */
+        box-shadow: 0 0.375rem 0.625rem rgba(0, 0, 0, 0.2); /* 加深阴影 */
     }
 </style>

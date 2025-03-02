@@ -17,42 +17,37 @@
 
 <style>
     /* 默认样式 */
+    .friend-links-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem; /* 设置间距 */
+    }
+
     .friend-link-item {
         display: flex;
         align-items: center;
-        text-decoration: none;
         font-size: 1.5rem; /* 修改为相对单位 */
-        margin-right: 1.25rem;
+        flex: 0 0 calc(33.333% - 1rem); /* 每个项占据三分之一减去间距 */
+        box-sizing: border-box; /* 确保内边距和边框包含在宽度内 */
     }
 
     .friend-link-item img {
         width: 3.75rem;
         height: auto;
-        margin-right: 0.625rem;
-        border-radius: 0.3125rem;
-        margin: 0;
+        margin: 0.5rem;
+        border-radius: auto;
     }
 
-    .friend-link-item span {
-        line-height: 1;
-        margin: 0.3125em;
-    }
-
-    /* 移动端样式 */
+    /* 移动端优化 */
     @media (max-width: 768px) {
         .friend-link-item {
-            font-size: 1rem;
-            margin-right: 0.5rem;
+            flex: 0 0 calc(50% - 1rem); /* 每行显示2个 */
         }
+    }
 
-        .friend-link-item img {
-            width: 3rem;
-            margin-right: 0.3rem;
-        }
-
-        .friend-link-item span {
-            font-size: 0.9rem;
-            margin: 0.2rem;
+    @media (max-width: 480px) {
+        .friend-link-item {
+            flex: 0 0 100%; /* 每行显示1个 */
         }
     }
 </style>
