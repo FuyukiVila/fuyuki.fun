@@ -70,16 +70,16 @@
   });
 
   // 确保事件监听器只被添加一次
-  if (!window.__autoPlayMusicAdded) {
-    document.addEventListener(
-      "click",
-      () => {
-        if (!isPlaying) {
-          autoPlayMusic();
-        }
-      },
-      { once: true }
-    );
-    window.__autoPlayMusicAdded = true;
-  }
+  // if (!window.__autoPlayMusicAdded) {
+  //   document.addEventListener(
+  //     "click",
+  //     () => {
+  //       if (!isPlaying) {
+  //         autoPlayMusic();
+  //       }
+  //     },
+  //     { once: true }
+  //   );
+  //   window.__autoPlayMusicAdded = true;
+  // }
 </script>
