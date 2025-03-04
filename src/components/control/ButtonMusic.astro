@@ -28,28 +28,14 @@
 </style>
 
 <script>
-  // 获取DOM元素
-  const musicButton = document.getElementById("musicButton");
-  const backgroundMusic = document.getElementById("backgroundMusic");
-  const musicIcon = musicButton.querySelector("img"); // 获取音乐图标元素
+  const musicButton = document.getElementById("musicButton") as HTMLDivElement;
+  const backgroundMusic = document.getElementById(
+    "backgroundMusic"
+  ) as HTMLAudioElement;
+  const musicIcon = musicButton.querySelector("img") as HTMLImageElement; // 获取音乐图标元素
 
   // 初始化播放状态
   let isPlaying = false;
-
-  // 自动播放音乐
-  function autoPlayMusic() {
-    backgroundMusic
-      .play()
-      .then(() => {
-        isPlaying = true;
-        musicButton.classList.add("animate-spin-slow"); // 使用自定义的慢速旋转动画
-        musicIcon.src =
-          "https://api.iconify.design/fluent:music-note-2-24-filled.svg"; // 切换为播放图标
-      })
-      .catch((error) => {
-        console.error("自动播放失败:", error);
-      });
-  }
 
   // 点击事件处理
   musicButton.addEventListener("click", () => {
@@ -59,27 +45,15 @@
       musicButton.classList.remove("animate-spin-slow"); // 移除旋转动画
       musicIcon.src =
         "https://api.iconify.design/fluent:music-note-off-2-24-filled.svg"; // 切换为停止图标
+      isPlaying = !isPlaying;
     } else {
       // 如果已暂停，则继续播放
-      backgroundMusic.play();
-      musicButton.classList.add("animate-spin-slow"); // 添加旋转动画
-      musicIcon.src =
-        "https://api.iconify.design/fluent:music-note-2-24-filled.svg"; // 切换为播放图标
+      backgroundMusic.play().then(() => {
+        musicButton.classList.add("animate-spin-slow"); // 添加旋转动画
+        musicIcon.src =
+          "https://api.iconify.design/fluent:music-note-2-24-filled.svg"; // 切换为播放图标
+        isPlaying = !isPlaying;
+      });
     }
-    isPlaying = !isPlaying; // 切换播放状态
   });
-
-  // 确保事件监听器只被添加一次
-  // if (!window.__autoPlayMusicAdded) {
-  //   document.addEventListener(
-  //     "click",
-  //     () => {
-  //       if (!isPlaying) {
-  //         autoPlayMusic();
-  //       }
-  //     },
-  //     { once: true }
-  //   );
-  //   window.__autoPlayMusicAdded = true;
-  // }
 </script>
