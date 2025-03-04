@@ -45,15 +45,14 @@
       musicButton.classList.remove("animate-spin-slow"); // 移除旋转动画
       musicIcon.src =
         "https://api.iconify.design/fluent:music-note-off-2-24-filled.svg"; // 切换为停止图标
-      isPlaying = !isPlaying;
     } else {
       // 如果已暂停，则继续播放
       backgroundMusic.play().then(() => {
         musicButton.classList.add("animate-spin-slow"); // 添加旋转动画
         musicIcon.src =
           "https://api.iconify.design/fluent:music-note-2-24-filled.svg"; // 切换为播放图标
-        isPlaying = !isPlaying;
       });
     }
+    isPlaying = !isPlaying;
   });
 </script>
