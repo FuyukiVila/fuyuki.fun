@@ -8,7 +8,7 @@
   />
 </div>
 
-<audio id="backgroundMusic" loop>
+<audio id="backgroundMusic" loop preload="auto">
   <source src="/music/エンドロール・シンドローム.mp3" type="audio/mp3" />
 </audio>
 
@@ -27,19 +27,14 @@
   }
 </style>
 
-<script>
-  const musicButton = document.getElementById("musicButton") as HTMLDivElement;
-  const backgroundMusic = document.getElementById(
-    "backgroundMusic"
-  ) as HTMLAudioElement;
-  const musicIcon = musicButton.querySelector("img") as HTMLImageElement; // 获取音乐图标元素
-
-  // 初始化播放状态
-  let isPlaying = false;
+<script defer is:inline>
+  const musicButton = document.getElementById("musicButton");
+  const backgroundMusic = document.getElementById("backgroundMusic");
+  const musicIcon = musicButton.querySelector("img");
 
   // 点击事件处理
   musicButton.addEventListener("click", () => {
-    if (isPlaying) {
+    if (!backgroundMusic.paused) {
       // 如果正在播放，则暂停
       backgroundMusic.pause();
       musicButton.classList.remove("animate-spin-slow"); // 移除旋转动画
@@ -53,6 +48,5 @@
           "https://api.iconify.design/fluent:music-note-2-24-filled.svg"; // 切换为播放图标
       });
     }
-    isPlaying = !isPlaying;
   });
 </script>
