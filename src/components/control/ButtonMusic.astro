@@ -3,10 +3,7 @@
   id="musicButton"
   onclick="toggleMusic()"
 >
-  <img
-    src="https://api.iconify.design/fluent:music-note-off-2-24-filled.svg"
-    class="w-6 h-6"
-  />
+  <img src="/images/fluent_music-note-off-2-24-filled.svg" class="w-6 h-6" />
 </div>
 
 <audio id="backgroundMusic" loop>
@@ -28,7 +25,7 @@
   }
 </style>
 
-<script is:raw is:inline>
+<script is:inline>
   function toggleMusic() {
     const musicButton = document.getElementById("musicButton");
     const backgroundMusic = document.getElementById("backgroundMusic");
@@ -37,14 +34,12 @@
       // 如果正在播放，则暂停
       backgroundMusic.pause();
       musicButton.classList.remove("animate-spin-slow"); // 移除旋转动画
-      musicIcon.src =
-        "https://api.iconify.design/fluent:music-note-off-2-24-filled.svg"; // 切换为停止图标
+      musicIcon.src = "/images/fluent_music-note-off-2-24-filled.svg"; // 切换为停止图标
     } else {
       // 如果已暂停，则继续播放
       backgroundMusic.play().then(() => {
         musicButton.classList.add("animate-spin-slow"); // 添加旋转动画
-        musicIcon.src =
-          "https://api.iconify.design/fluent:music-note-2-24-filled.svg"; // 切换为播放图标
+        musicIcon.src = "/images/fluent_music-note-2-24-filled.svg"; // 切换为播放图标
       });
     }
   }
