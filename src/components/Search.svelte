@@ -57,8 +57,8 @@ onMount(() => {
     if (isDesktop) {
       panel.classList.remove('float-panel-closed')
     }
-    result = arr
-  }
+    result = arr;
+  };
 
   // add event listener to listen for ctrl+k
   const handleKeyDown = (event: KeyboardEvent) => {
