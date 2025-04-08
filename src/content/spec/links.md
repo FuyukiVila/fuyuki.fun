@@ -9,7 +9,7 @@
 # My Friends
 
 <div class="friend-links-container">
-    <a href="https://masttf.fun" class="friend-link-item" target="_blank">
+    <a href="https://epiphyllum.masttf.fun/" class="friend-link-item" target="_blank">
         <img src="/avatars/masttf.jpg">
         <span>Masttf</span> 
     </a>
