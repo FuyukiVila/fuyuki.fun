@@ -1,8 +1,8 @@
 import type {
-  LicenseConfig,
-  NavBarConfig,
-  ProfileConfig,
-  SiteConfig,
+	LicenseConfig,
+	NavBarConfig,
+	ProfileConfig,
+	SiteConfig,
 } from "./types/config";
 import { LinkPreset } from "./types/config";
 

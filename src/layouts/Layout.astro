@@ -6,14 +6,14 @@ import "@fontsource/roboto/700.css";
 import { profileConfig, siteConfig } from "@/config";
 import ConfigCarrier from "@components/ConfigCarrier.astro";
 import {
-  AUTO_MODE,
-  BANNER_HEIGHT,
-  BANNER_HEIGHT_EXTEND,
-  BANNER_HEIGHT_HOME,
-  DARK_MODE,
-  DEFAULT_THEME,
-  LIGHT_MODE,
-  PAGE_WIDTH,
+	AUTO_MODE,
+	BANNER_HEIGHT,
+	BANNER_HEIGHT_EXTEND,
+	BANNER_HEIGHT_HOME,
+	DARK_MODE,
+	DEFAULT_THEME,
+	LIGHT_MODE,
+	PAGE_WIDTH,
 } from "../constants/constants";
 import { defaultFavicons } from "../constants/icon";
 import type { Favicon } from "../types/config";
@@ -21,11 +21,11 @@ import { url, pathsEqual } from "../utils/url-utils";
 import "katex/dist/katex.css";
 
 interface Props {
-  title?: string;
-  banner?: string;
-  description?: string;
-  lang?: string;
-  setOGTypeArticle?: boolean;
+	title?: string;
+	banner?: string;
+	description?: string;
+	lang?: string;
+	setOGTypeArticle?: boolean;
 }
 
 let { title, banner, description, lang, setOGTypeArticle } = Astro.props;
@@ -39,7 +39,7 @@ const isHomePage = pathsEqual(Astro.url.pathname, url("/"));
 // why doing this in Layout instead of GlobalStyles: https://github.com/withastro/astro/issues/6728#issuecomment-1502203757
 const configHue = siteConfig.themeColor.hue;
 if (!banner || typeof banner !== "string" || banner.trim() === "") {
-  banner = siteConfig.banner.src;
+	banner = siteConfig.banner.src;
 }
 
 // TODO don't use post cover as banner for now
@@ -49,27 +49,27 @@ const enableBanner = siteConfig.banner.enable;
 
 let pageTitle: string;
 if (title) {
-  pageTitle = `${title} - ${siteConfig.title}`;
+	pageTitle = `${title} - ${siteConfig.title}`;
 } else {
-  pageTitle = `${siteConfig.title} - ${siteConfig.subtitle}`;
+	pageTitle = `${siteConfig.title} - ${siteConfig.subtitle}`;
 }
 
 const favicons: Favicon[] =
-  siteConfig.favicon.length > 0 ? siteConfig.favicon : defaultFavicons;
+	siteConfig.favicon.length > 0 ? siteConfig.favicon : defaultFavicons;
 
 // const siteLang = siteConfig.lang.replace('_', '-')
 if (!lang) {
-  lang = `${siteConfig.lang}`;
+	lang = `${siteConfig.lang}`;
 }
 const siteLang = lang.replace("_", "-");
 
 const bannerOffsetByPosition = {
-  top: `${BANNER_HEIGHT_EXTEND}vh`,
-  center: `${BANNER_HEIGHT_EXTEND / 2}vh`,
-  bottom: "0",
+	top: `${BANNER_HEIGHT_EXTEND}vh`,
+	center: `${BANNER_HEIGHT_EXTEND / 2}vh`,
+	bottom: "0",
 };
 const bannerOffset =
-  bannerOffsetByPosition[siteConfig.banner.position || "center"];
+	bannerOffsetByPosition[siteConfig.banner.position || "center"];
 ---
 
 <!doctype html>
@@ -228,27 +228,20 @@ const bannerOffset =
 </style>
 
 <script>
-  import "overlayscrollbars/overlayscrollbars.css";
-  import {
-    OverlayScrollbars,
-    // ScrollbarsHidingPlugin,
-    // SizeObserverPlugin,
-    // ClickScrollPlugin
-  } from "overlayscrollbars";
-  import {
-    getHue,
-    getStoredTheme,
-    setHue,
-    setTheme,
-  } from "../utils/setting-utils";
-  import { pathsEqual, url } from "../utils/url-utils";
-  import {
-    BANNER_HEIGHT,
-    BANNER_HEIGHT_HOME,
-    BANNER_HEIGHT_EXTEND,
-    MAIN_PANEL_OVERLAPS_BANNER_HEIGHT,
-    PAGE_WIDTH,
-  } from "../constants/constants";
+import 'overlayscrollbars/overlayscrollbars.css';
+import {
+	OverlayScrollbars,
+	// ScrollbarsHidingPlugin,
+	// SizeObserverPlugin,
+	// ClickScrollPlugin
+} from 'overlayscrollbars';
+import {getHue, getStoredTheme, setHue, setTheme} from "../utils/setting-utils";
+import {pathsEqual, url} from "../utils/url-utils";
+import {
+	BANNER_HEIGHT,
+	BANNER_HEIGHT_HOME,
+	BANNER_HEIGHT_EXTEND,
+	MAIN_PANEL_OVERLAPS_BANNER_HEIGHT} from "../constants/constants";
 
   /* Preload fonts */
   // (async function() {
@@ -446,25 +439,25 @@ const bannerOffset =
         heightExtend.classList.remove("hidden");
       }
 
-      // Hide the TOC while scrolling back to top
-      let toc = document.getElementById("toc-wrapper");
-      if (toc) {
-        toc.classList.add("toc-not-ready");
-      }
-    });
-    window.swup.hooks.on("page:view", () => {
-      // hide the temp high element when the transition is done
-      const heightExtend = document.getElementById("page-height-extend");
-      if (heightExtend) {
-        heightExtend.classList.remove("hidden");
-      }
-    });
-    window.swup.hooks.on("visit:end", (visit: { to: { url: string } }) => {
-      setTimeout(() => {
-        const heightExtend = document.getElementById("page-height-extend");
-        if (heightExtend) {
-          heightExtend.classList.add("hidden");
-        }
+		// Hide the TOC while scrolling back to top
+		let toc = document.getElementById('toc-wrapper');
+		if (toc) {
+			toc.classList.add('toc-not-ready')
+		}
+	});
+	window.swup.hooks.on('page:view', () => {
+		// hide the temp high element when the transition is done
+		const heightExtend = document.getElementById('page-height-extend')
+		if (heightExtend) {
+			heightExtend.classList.remove('hidden')
+		}
+	});
+	window.swup.hooks.on('visit:end', (_visit: {to: {url: string}}) => {
+		setTimeout(() => {
+			const heightExtend = document.getElementById('page-height-extend')
+			if (heightExtend) {
+				heightExtend.classList.add('hidden')
+			}
 
         // Just make the transition looks better
         const toc = document.getElementById("toc-wrapper");
