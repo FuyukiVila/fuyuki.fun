@@ -13,3 +13,13 @@
 ::friend{name="Masttf" avatar="/avatars/masttf.jpg" url="https://epiphyllum.masttf.fun/" description="epiphyllum"}
 
 </div>
+
+## 申请友链格式
+
+**名称**: [填写名称]
+
+**网站地址**: [填写网站地址]
+
+**描述**: [填写描述]
+
+**头像**: [填写头像地址]

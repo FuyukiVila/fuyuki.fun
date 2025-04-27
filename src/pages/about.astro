@@ -7,6 +7,7 @@ import { render } from "astro:content";
 import Markdown from "@components/misc/Markdown.astro";
 import I18nKey from "../i18n/i18nKey";
 import { i18n } from "../i18n/translation";
+import Comment from "@components/Comment";
 
 const aboutPost = await getEntry("spec", "about");
 
@@ -24,4 +25,6 @@ const { Content } = await render(aboutPost);
             </Markdown>
         </div>
     </div>
+    <Comment className="col-span-2 lg:col-span-1 block row-start-2" client:only="react"></Comment>
+
 </MainGridLayout>
