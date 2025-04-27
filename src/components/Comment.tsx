@@ -36,7 +36,7 @@ const Comment = ({ className }: { className?: string }) => {
     }, []);
     
     return (
-        <div className={`mt-12 ${className}`}>
+        <div className={`mt-8 ${className}`}>
             {mounted ? (
                 <Giscus
                     key={key}
