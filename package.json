@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
+    "@astrojs/cloudflare": "^12.5.1",
     "@astrojs/rss": "^4.0.11",
     "@astrojs/sitemap": "^3.3.1",
     "@astrojs/svelte": "7.0.11",
@@ -67,5 +68,5 @@
     "postcss-import": "^16.1.0",
     "postcss-nesting": "^13.0.1"
   },
-  "packageManager": "pnpm@9.14.4"
+  "packageManager": "pnpm@10.9.0"
 }

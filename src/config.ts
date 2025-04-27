@@ -43,11 +43,7 @@ export const navBarConfig: NavBarConfig = {
     LinkPreset.Home,
     LinkPreset.Archive,
     LinkPreset.About,
-    {
-      name: "友链",
-      url: "/links/",
-      external: false,
-    },
+    LinkPreset.Friend,
     {
       name: "GitHub",
       url: "https://github.com/fuyukivila/fuyuki.fun", // Internal links should not include the base path, as it is automatically added
