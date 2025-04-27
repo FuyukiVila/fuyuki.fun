@@ -29,7 +29,7 @@ export function FriendCardComponent(properties, children) {
     return h(
         "div",
         {
-            class: `flex flex-col rounded-2xl overflow-hidden transition-all duration-300 bg-[var(--card-bg)] shadow-md border-4 border-[var(--border-color)] hover:translate-y-[-5px] hover:shadow-lg hover:border-[rgba(var(--accent-rgb),0.4)] xs:w-full sm:w-[45%]`,
+            class: `flex flex-col rounded-2xl overflow-hidden transition-all duration-300 bg-[var(--card-bg)] shadow-md border-2 border-[var(--border-color)] hover:translate-y-[-5px] hover:shadow-lg hover:border-[rgba(var(--accent-rgb),0.4)] xs:w-full sm:w-[45%]`,
         },
         [
             h("div", { class: "flex flex-row p-5 gap-4 items-center w-full" }, [
