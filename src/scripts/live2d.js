@@ -163,15 +163,9 @@ const waifu_tips =
             ]
         },
         {
-            "selector": "a[href='/links/']",
+            "selector": "a[href='/friend/']",
             "text": [
                 "想认识认识其他朋友吗？"
-            ]
-        },
-        {
-            "selector": ".friend-links-container",
-            "text": [
-                "去看看 <span style=\"color:#0099cc;\">{text}</span> 的网站？"
             ]
         },
         {
@@ -237,7 +231,7 @@ const waifu_tips =
             ]
         },
         {
-            "selector": "#search-input-desktop",
+            "selector": "#search-bar",
             "text": [
                 "要找什么呢？"
             ]
