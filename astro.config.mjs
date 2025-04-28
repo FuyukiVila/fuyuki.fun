@@ -50,8 +50,8 @@ export default defineConfig({
       'fa6-solid': ['*'],
     },
   }), svelte(), sitemap(), Compress({
-    CSS: false,
-    Image: false,
+    CSS: true,
+    Image: true,
     Action: {
       Passed: async () => true, // https://github.com/PlayForm/Compress/issues/376
     },
