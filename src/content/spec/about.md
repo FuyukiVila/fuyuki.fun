@@ -1,10 +1,10 @@
-> ***Yuki snows the night***
+> **_Yuki snows the night_**
 >
-> ***but the white is not as pure as it had been***
+> **_but the white is not as pure as it had been_**
 >
-> ***Hikari illuminates the world***
+> **_Hikari illuminates the world_**
 >
-> ***but the light is not as bright as it had been***
+> **_but the light is not as bright as it had been_**
 
 <center><img src="https://count.getloli.com/@fuyuki.fun?theme=booru-lewd" alt="fuyuki.fun" /></center>
 
