@@ -10,7 +10,7 @@
 
 <div class="flex flex-wrap gap-6 justify-start">
 
-::friend{name="Masttf" avatar="https://epiphyllum.masttf.fun/avatar.jpg" url="https://epiphyllum.masttf.fun/" description="epiphyllum"}
+::friend{name="Masttf" avatar="https://epiphyllum.masttf.fun/avatar.jpg" url="https://epiphyllum.masttf.fun" description="退役Acmer 是个菜鸡"}
 
 </div>
 
