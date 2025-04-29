@@ -8,6 +8,15 @@ module.exports = {
       fontFamily: {
         sans: ["Roboto", "sans-serif", ...defaultTheme.fontFamily.sans],
       },
+      keyframes: {
+        moveRight: {
+          '0%, 100%': { transform: 'translateX(0)' },
+          '50%': { transform: 'translateX(5px)' }
+        }
+      },
+      animation: {
+        moveRight: 'moveRight 1s ease-in-out infinite'
+      }
     },
   },
   plugins: [require("@tailwindcss/typography")],

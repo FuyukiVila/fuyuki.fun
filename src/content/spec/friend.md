@@ -12,6 +12,8 @@
 
 ::friend{name="Masttf" avatar="https://epiphyllum.masttf.fun/avatar.jpg" url="https://epiphyllum.masttf.fun" description="退役Acmer 是个菜鸡"}
 
+::friend{name="Elykia" avatar="https://bu.dusays.com/2024/10/25/671b2438203a6.gif" url="https://blog.elykia.cn/" description="致以无暇之人"}
+
 </div>
 
 ---
