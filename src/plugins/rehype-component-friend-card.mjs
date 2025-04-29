@@ -1,6 +1,16 @@
 import { h } from "hastscript";
 
 /**
+ * Formats a URL by removing the protocol (http:// or https://) and trailing slash
+ * 
+ * @param {string} url - The URL to format
+ * @returns {string} The formatted URL
+ */
+function formatUrl(url) {
+    return url.replace(/^https?:\/\//, '').replace(/\/$/, '');
+}
+
+/**
  * Creates a Friend Card component.
  *
  * @param {Object} properties - The properties of the component.
@@ -51,7 +61,7 @@ export function FriendCardComponent(properties, children) {
                         target: "_blank",
                         rel: "noopener noreferrer"
                     }, [
-                        h("span", {}, "访问"),
+                        h("span", {}, formatUrl(url)),
                         h("span", { class: "transition-transform duration-200 group-hover:animate-moveRight" }, "→")
                     ])
                 ])
