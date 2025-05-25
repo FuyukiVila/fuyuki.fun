@@ -14,7 +14,7 @@
 
 本站使用开源静态网页生成工具 [Astro](https://astro.build/)，主题使用 saicaca 提供的 [fuwari](https://github.com/saicaca/fuwari)
 
-托管于 [Cloudflare Pages](https://pages.cloudflare.com/)
+托管于 [Vercel](https://vercel.com/)
 
 由 [Cloudflare](https://www.cloudflare.com/) 提供 DNS 解析服务
 
