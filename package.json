@@ -33,6 +33,8 @@
     "@tailwindcss/typography": "^0.5.16",
     "@types/react": "^19.1.5",
     "@types/react-dom": "^19.1.5",
+    "@vercel/analytics": "^1.5.0",
+    "@vercel/speed-insights": "^1.2.0",
     "astro": "5.8.0",
     "astro-compress": "^2.3.8",
     "astro-icon": "^1.1.5",
