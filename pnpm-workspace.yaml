@@ -1,0 +1,6 @@
+ignoredBuiltDependencies:
+  - '@biomejs/biome'
+  - '@vercel/speed-insights'
+  - esbuild
+  - sharp
+  - swup
