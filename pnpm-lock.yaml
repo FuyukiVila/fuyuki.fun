@@ -22,7 +22,7 @@ importers:
         version: 3.4.1
       '@astrojs/svelte':
         specifier: 7.1.0
-        version: 7.1.0(@types/node@24.0.3)(astro@5.9.4(@types/node@24.0.3)(jiti@1.21.7)(lightningcss@1.29.3)(rollup@2.79.2)(stylus@0.64.0)(terser@5.42.0)(typescript@5.8.3)(yaml@2.8.0))(jiti@1.21.7)(lightningcss@1.29.3)(stylus@0.64.0)(svelte@5.34.3)(terser@5.42.0)(typescript@5.8.3)(yaml@2.8.0)
+        version: 7.1.0(@types/node@24.0.3)(astro@5.8.0(@types/node@24.0.3)(jiti@1.21.7)(lightningcss@1.29.3)(rollup@2.79.2)(stylus@0.64.0)(terser@5.42.0)(typescript@5.8.3)(yaml@2.8.0))(jiti@1.21.7)(lightningcss@1.29.3)(stylus@0.64.0)(svelte@5.34.3)(terser@5.42.0)(typescript@5.8.3)(yaml@2.8.0)
       '@astrojs/tailwind':
         specifier: ^6.0.2
         version: 6.0.2(astro@5.9.4(@types/node@24.0.3)(jiti@1.21.7)(lightningcss@1.29.3)(rollup@2.79.2)(stylus@0.64.0)(terser@5.42.0)(typescript@5.8.3)(yaml@2.8.0))(tailwindcss@3.4.17)
@@ -54,7 +54,7 @@ importers:
         specifier: ^1.2.3
         version: 1.2.3
       '@iconify-json/material-symbols':
-        specifier: ^1.2.25
+        specifier: ^1.2.26
         version: 1.2.26
       '@iconify/svelte':
         specifier: ^4.2.0
@@ -5467,10 +5467,11 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.25.67
 
-  '@astrojs/svelte@7.1.0(@types/node@24.0.3)(astro@5.9.4(@types/node@24.0.3)(jiti@1.21.7)(lightningcss@1.29.3)(rollup@2.79.2)(stylus@0.64.0)(terser@5.42.0)(typescript@5.8.3)(yaml@2.8.0))(jiti@1.21.7)(lightningcss@1.29.3)(stylus@0.64.0)(svelte@5.34.3)(terser@5.42.0)(typescript@5.8.3)(yaml@2.8.0)':
+  '@astrojs/svelte@7.1.0(@types/node@24.0.3)(astro@5.8.0(@types/node@24.0.3)(jiti@1.21.7)(lightningcss@1.29.3)(rollup@2.79.2)(stylus@0.64.0)(terser@5.42.0)(typescript@5.8.3)(yaml@2.8.0))(jiti@1.21.7)(lightningcss@1.29.3)(stylus@0.64.0)(svelte@5.34.3)(terser@5.42.0)(typescript@5.8.3)(yaml@2.8.0)':
     dependencies:
       '@sveltejs/vite-plugin-svelte': 5.1.0(svelte@5.34.3)(vite@6.3.5(@types/node@24.0.3)(jiti@1.21.7)(lightningcss@1.29.3)(stylus@0.64.0)(terser@5.42.0)(yaml@2.8.0))
-      astro: 5.9.4(@types/node@24.0.3)(jiti@1.21.7)(lightningcss@1.29.3)(rollup@2.79.2)(stylus@0.64.0)(terser@5.42.0)(typescript@5.8.3)(yaml@2.8.0)
+      astro: 5.8.0(@types/node@24.0.3)(jiti@1.21.7)(lightningcss@1.29.3)(rollup@2.79.2)(stylus@0.64.0)(terser@5.42.0)(typescript@5.8.3)(yaml@2.8.0)
+
       svelte: 5.34.3
       svelte2tsx: 0.7.39(svelte@5.34.3)(typescript@5.8.3)
       typescript: 5.8.3
