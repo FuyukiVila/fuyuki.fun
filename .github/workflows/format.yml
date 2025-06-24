@@ -22,7 +22,7 @@ jobs:
           version: latest
 
       - name: Format files
-        run: biome format --write ./src
+        run: biome format --write .
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v5
