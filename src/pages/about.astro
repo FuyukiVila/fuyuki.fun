@@ -1,30 +1,32 @@
 ---
-
-import MainGridLayout from "../layouts/MainGridLayout.astro";
-
-import { getEntry } from "astro:content";
-import { render } from "astro:content";
+import { getEntry, render } from "astro:content";
 import Markdown from "@components/misc/Markdown.astro";
 import I18nKey from "../i18n/i18nKey";
 import { i18n } from "../i18n/translation";
+import MainGridLayout from "../layouts/MainGridLayout.astro";
 import Comment from "@components/Comment";
 
 const aboutPost = await getEntry("spec", "about");
 
 if (!aboutPost) {
-	throw new Error("About page content not found");
+    throw new Error("About page content not found");
 }
 
 const { Content } = await render(aboutPost);
 ---
+
 <MainGridLayout title={i18n(I18nKey.about)} description={i18n(I18nKey.about)}>
-    <div class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative min-h-32">
-        <div class="card-base z-10 px-9 py-6 relative w-full ">
+    <div
+        class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative min-h-32"
+    >
+        <div class="card-base z-10 px-9 py-6 relative w-full">
             <Markdown class="mt-2">
                 <Content />
             </Markdown>
         </div>
     </div>
-    <Comment className="col-span-2 lg:col-span-1 block row-start-2" client:only="react"></Comment>
-
+    <Comment
+        className="col-span-2 lg:col-span-1 block row-start-2"
+        client:only="react"
+    />
 </MainGridLayout>
