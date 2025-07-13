@@ -1,46 +1,52 @@
 <div
-  class="fixed bottom-5 left-5 w-12 h-12 bg-[var(--btn-regular-bg)] dark:bg-[var(--btn-content)] text-[var(--btn-content)] text-2xl leading-[3rem] text-center rounded-full cursor-pointer shadow-md hover:shadow-lg transition-transform duration-300 ease-in-out z-[100] flex items-center justify-center"
-  id="musicButton"
-  onclick="toggleMusic()"
+    class="fixed bottom-5 left-5 w-12 h-12 bg-[var(--btn-regular-bg)] dark:bg-[var(--btn-content)] text-[var(--btn-content)] text-2xl leading-[3rem] text-center rounded-full cursor-pointer shadow-md hover:shadow-lg transition-transform duration-300 ease-in-out z-[100] flex items-center justify-center"
+    id="musicButton"
+    onclick="toggleMusic()"
 >
-  <img src="/images/fluent_music-note-off-2-24-filled.svg" class="w-6 h-6" />
+    <img
+        src="/images/fluent_music-note-off-2-24-filled.svg"
+        class="w-6 h-6"
+        alt="Music Off"
+    />
 </div>
 
 <audio id="backgroundMusic" loop>
-  <source src="/music/エンドロール・シンドローム.mp3" type="audio/mp3" />
+    <source src="/music/エンドロール・シンドローム.mp3" type="audio/mp3" />
 </audio>
 
 <style>
-  @keyframes spin-slow {
-    from {
-      transform: rotate(0deg);
+    @keyframes spin-slow {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
     }
-    to {
-      transform: rotate(360deg);
-    }
-  }
 
-  .animate-spin-slow {
-    animation: spin-slow 2s linear infinite;
-  }
+    .animate-spin-slow {
+        animation: spin-slow 2s linear infinite;
+    }
 </style>
 
 <script is:inline>
-  function toggleMusic() {
-    const musicButton = document.getElementById("musicButton");
-    const backgroundMusic = document.getElementById("backgroundMusic");
-    const musicIcon = musicButton.querySelector("img");
-    if (!backgroundMusic.paused) {
-      // 如果正在播放，则暂停
-      backgroundMusic.pause();
-      musicButton.classList.remove("animate-spin-slow"); // 移除旋转动画
-      musicIcon.src = "/images/fluent_music-note-off-2-24-filled.svg"; // 切换为停止图标
-    } else {
-      // 如果已暂停，则继续播放
-      backgroundMusic.play().then(() => {
-        musicButton.classList.add("animate-spin-slow"); // 添加旋转动画
-        musicIcon.src = "/images/fluent_music-note-2-24-filled.svg"; // 切换为播放图标
-      });
+    function toggleMusic() {
+        const musicButton = document.getElementById("musicButton");
+        const backgroundMusic = document.getElementById("backgroundMusic");
+        const musicIcon = musicButton.querySelector("img");
+        if (!backgroundMusic.paused) {
+            // 如果正在播放，则暂停
+            backgroundMusic.pause();
+            musicButton.classList.remove("animate-spin-slow");
+            musicIcon.src = "/images/fluent_music-note-off-2-24-filled.svg";
+            musicIcon.alt = "Music Off";
+        } else {
+            // 如果已暂停，则继续播放
+            backgroundMusic.play().then(() => {
+                musicButton.classList.add("animate-spin-slow");
+                musicIcon.src = "/images/fluent_music-note-2-24-filled.svg";
+                musicIcon.alt = "Music On";
+            });
+        }
     }
-  }
 </script>
