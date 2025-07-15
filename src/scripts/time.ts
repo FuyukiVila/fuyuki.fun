@@ -1,4 +1,4 @@
-let timer: NodeJS.Timer | null = null;
+let timer: ReturnType<typeof setInterval> | null = null;
 
 function secondToDate(second: number): string {
 	if (!second) {
