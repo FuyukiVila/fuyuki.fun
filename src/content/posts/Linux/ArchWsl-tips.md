@@ -5,7 +5,7 @@ description: 'ArchWsl的一些注意事项和技巧'
 image: ''
 tags: [WSL, Arch, wslg]
 category: 'Linux'
-draft: false 
+draft: false
 lang: ''
 ---
 
@@ -14,7 +14,7 @@ lang: ''
 ##### 将windows字体共享到wsl中
 
 ```shell
-sudo ln -s /mnt/c/Windows/Fonts /usr/share/fonts/font
+sudo ln -s /mnt/c/Windows/Fonts /usr/share/fonts/windows
 sudo fc-cache -fv
 ```
 
@@ -65,7 +65,7 @@ ln -sf /mnt/wslg/runtime-dir/wayland-0* /run/user/1000/
 ##### 安装fcitx5
 
 ```shell
-sudo pacman -S fcitx5-im fcitx5-chinese-addons fcitx5-material-color
+sudo pacman -S fcitx5-im fcitx5-chinese-addons
 ```
 
 ##### 在`.zshrc`或`.bashrc`前加入
