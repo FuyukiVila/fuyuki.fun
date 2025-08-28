@@ -1,31 +1,34 @@
 name: Format
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    types:
-      - opened
-      - synchronize
+    push:
+        branches:
+            - main
+    pull_request:
+        types:
+            - opened
+            - synchronize
 
 jobs:
-  format:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+    format:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
 
-      - name: Setup Biome
-        uses: biomejs/setup-biome@v2
-        with:
-          version: latest
-
-      - name: Format files
-        run: biome format --write .
-
-      - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v6
-        with:
-          commit_message: "style: format code with biome"
-          branch: ${{ github.head_ref }}
+            - name: Setup Biome
+              uses: biomejs/setup-biome@v2
+              with:
+                  version: latest
+            - name: format code with biome
+              run: biome format --write .
+            - name: format markdown with prettier
+              uses: creyD/prettier_action@v4.6
+              with:
+                  prettier_options: --write src/content/**/*.md
+                  no_commit: true
+            - name: Commit changes
+              uses: stefanzweifel/git-auto-commit-action@v6
+              with:
+                  commit_message: "style: format code with biome and prettier"
+                  branch: ${{ github.head_ref }}
