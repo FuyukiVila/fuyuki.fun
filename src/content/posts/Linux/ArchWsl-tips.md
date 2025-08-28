@@ -1,12 +1,12 @@
 ---
 title: ArchWsl的一些注意事项和技巧
 published: 2024-12-19
-description: 'ArchWsl的一些注意事项和技巧'
-image: ''
+description: "ArchWsl的一些注意事项和技巧"
+image: ""
 tags: [WSL, Arch, wslg]
-category: 'Linux'
+category: "Linux"
 draft: false
-lang: ''
+lang: ""
 ---
 
 #### font
@@ -125,4 +125,3 @@ sudo pacman -Rns $(pacman -Qtdq)
 ```shell
 sudo journalctl --vacuum-size=50M
 ```
-

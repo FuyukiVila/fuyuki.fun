@@ -1,12 +1,12 @@
 ---
 title: 2024-2025 ICPC NERC, Kyrgyzstan Qualification Contest
 published: 2024-12-27
-description: '2024 Kyrgyzstan Qualification Contest 题解报告'
-image: ''
+description: "2024 Kyrgyzstan Qualification Contest 题解报告"
+image: ""
 tags: [codeforces, ICPC, NERC]
-category: '题解'
-draft: false 
-lang: ''
+category: "题解"
+draft: false
+lang: ""
 ---
 
 ## 题目链接
@@ -26,15 +26,13 @@ lang: ''
 ### 代码
 
 ```cpp
-void idol_produce(int testCase) { 
+void idol_produce(int testCase) {
     /*Code Here*/
     int n;
     cin >> n;
     cout << n - 1 << '\n';
 }
 ```
-
-
 
 ## [B. Ant Hill](https://codeforces.com/gym/105494/problem/B)
 
@@ -49,7 +47,7 @@ void idol_produce(int testCase) {
 ### 代码
 
 ```cpp
-void idol_produce(int testCase) { 
+void idol_produce(int testCase) {
     /*Code Here*/
     int n;
     cin >> n;
@@ -78,7 +76,7 @@ $n$ 个房间，每次可以从房间 $n$ 转移到房间 $n + 1$，有 $k$ 个�
 ### 代码
 
 ```cpp
-void idol_produce(int testCase) { 
+void idol_produce(int testCase) {
     /*Code Here*/
     int n, k;
     cin >> n >> k;
@@ -103,9 +101,9 @@ void idol_produce(int testCase) {
 
 将 $n$ 个数字分为最小数目的好数集，好数集的定义如下：
 
-1.   集合的大小不超过 $k$
+1.  集合的大小不超过 $k$
 
-2.   集合的最大值和最小值之差不超过 $M$
+2.  集合的最大值和最小值之差不超过 $M$
 
 ### 题解
 
@@ -196,6 +194,7 @@ void idol_produce(int testCase) {
 ### 题解
 
 令 $dp_m(i)$ 表示第 $i$ 次未冥想获得的最多知识点，$dp_o(i)$ 表示第 $i$ 次冥想获得的最多的知识点，那么满足：
+
 $$
 dp_m(i) = \max(dp_o(i - 1), dp_m(i - 1)) + a_i \\
 dp_o(i) = dp_m(i-1) + 2 \times a_i
@@ -379,4 +378,3 @@ void idol_produce(int testCase) {
     cout << ans << endl;
 }
 ```
-

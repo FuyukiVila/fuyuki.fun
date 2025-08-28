@@ -1,12 +1,12 @@
 {
-    "editor.formatOnSave": true,
-    "editor.codeActionsOnSave": {
-        "source.fixAll": "explicit",
-        "quickfix.biome": "always",
-        "source.organizeImports.biome": "always"
-    },
-    "frontMatter.dashboard.openOnStart": false,
-    "[github-actions-workflow]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+	"editor.formatOnSave": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll": "explicit",
+		"quickfix.biome": "always",
+		"source.organizeImports.biome": "always"
+	},
+	"frontMatter.dashboard.openOnStart": false,
+	"[github-actions-workflow]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	}
 }
