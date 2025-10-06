@@ -21,7 +21,7 @@ jobs:
               with:
                   version: latest
             - name: format code with biome
-              run: biome format --write .
+              run: biome check --write .
             - name: format markdown with prettier
               uses: creyD/prettier_action@v4.6
               with:

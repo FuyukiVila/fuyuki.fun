@@ -1,19 +1,19 @@
 import Giscus from "@giscus/react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useId } from "react";
 import { twMerge } from "tailwind-merge";
 
 const Comment = ({ className }: { className?: string }) => {
     const [mounted, setMounted] = useState(false);
     const [theme, setTheme] = useState<"light" | "dark">("light");
-
-    // 根据 DOM 的 class 判断当前主题
-    const getCurrentTheme = (): "light" | "dark" => {
-        return document.documentElement.classList.contains("dark")
-            ? "dark"
-            : "light";
-    };
+    const id = useId();
 
     useEffect(() => {
+        const getCurrentTheme = (): "light" | "dark" => {
+            return document.documentElement.classList.contains("dark")
+                ? "dark"
+                : "light";
+        };
+
         setMounted(true);
         setTheme(getCurrentTheme());
 
@@ -37,7 +37,7 @@ const Comment = ({ className }: { className?: string }) => {
         <div className={twMerge("mt-8", className)}>
             {mounted ? (
                 <Giscus
-                    id="comment"
+                    id={id}
                     repo="fuyukivila/fuyuki.fun"
                     repoId="R_kgDONb2-tA"
                     category="Announcements"
