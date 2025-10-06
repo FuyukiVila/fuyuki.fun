@@ -12,7 +12,7 @@ import Comment from "@components/Comment";
 const friendPost = await getEntry("spec", "friend");
 
 if (!friendPost) {
-	throw new Error("Friend page content not found");
+    throw new Error("Friend page content not found");
 }
 
 const { Content } = await render(friendPost);

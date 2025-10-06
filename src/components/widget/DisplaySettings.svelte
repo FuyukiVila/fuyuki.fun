@@ -8,11 +8,11 @@ let hue = getHue();
 const defaultHue = getDefaultHue();
 
 function resetHue() {
-	hue = getDefaultHue();
+    hue = getDefaultHue();
 }
 
 $: if (hue || hue === 0) {
-	setHue(hue);
+    setHue(hue);
 }
 </script>
 
