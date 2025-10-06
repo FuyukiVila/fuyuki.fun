@@ -1,62 +1,58 @@
 import Giscus from "@giscus/react";
-import * as React from "react";
+import { useState, useEffect } from "react";
+import { twMerge } from "tailwind-merge";
 
 const Comment = ({ className }: { className?: string }) => {
-	const [mounted, setMounted] = React.useState(false);
-	const [theme, setTheme] = React.useState<"light" | "dark">("light");
-	const [key, setKey] = React.useState(0);
+    const [mounted, setMounted] = useState(false);
+    const [theme, setTheme] = useState<"light" | "dark">("light");
 
-	React.useEffect(() => {
-		setMounted(true);
+    // 根据 DOM 的 class 判断当前主题
+    const getCurrentTheme = (): "light" | "dark" => {
+        return document.documentElement.classList.contains("dark")
+            ? "dark"
+            : "light";
+    };
 
-		const storedTheme = localStorage.getItem("theme");
-		setTheme(storedTheme === "dark" ? "dark" : "light");
+    useEffect(() => {
+        setMounted(true);
+        setTheme(getCurrentTheme());
 
-		const handleThemeChange = () => {
-			const currentTheme = localStorage.getItem("theme");
-			setTheme(currentTheme === "dark" ? "dark" : "light");
-			setKey((prevKey) => prevKey + 1);
-		};
+        // 使用 MutationObserver 监听 DOM 的 class 变化
+        const observer = new MutationObserver(() => {
+            setTheme(getCurrentTheme());
+        });
 
-		window.addEventListener("storage", (e) => {
-			if (e.key === "theme") {
-				handleThemeChange();
-			}
-		});
+        // 开始监听 document.documentElement 的属性变化
+        observer.observe(document.documentElement, {
+            attributes: true,
+            attributeFilter: ["class"], // 只监听 class 属性
+        });
 
-		const handleCustomThemeChange = (e: Event) => {
-			handleThemeChange();
-		};
-		document.addEventListener("themeChanged", handleCustomThemeChange);
+        return () => {
+            observer.disconnect();
+        };
+    }, []);
 
-		return () => {
-			window.removeEventListener("storage", handleThemeChange);
-			document.removeEventListener("themeChanged", handleCustomThemeChange);
-		};
-	}, []);
-
-	return (
-		<div className={`mt-8 ${className}`}>
-			{mounted ? (
-				<Giscus
-					key={key}
-					id="comment"
-					repo="fuyukivila/fuyuki.fun"
-					repoId="R_kgDONb2-tA"
-					category="Announcements"
-					categoryId="DIC_kwDONb2-tM4CphCt"
-					mapping="pathname"
-					strict="0"
-					reactionsEnabled="1"
-					emitMetadata="0"
-					inputPosition="top"
-					theme={theme}
-					lang="zh-CN"
-					loading="lazy"
-				/>
-			) : null}
-		</div>
-	);
+    return (
+        <div className={twMerge("mt-8", className)}>
+            {mounted ? (
+                <Giscus
+                    id="comment"
+                    repo="fuyukivila/fuyuki.fun"
+                    repoId="R_kgDONb2-tA"
+                    category="Announcements"
+                    categoryId="DIC_kwDONb2-tM4CphCt"
+                    mapping="pathname"
+                    strict="0"
+                    reactionsEnabled="1"
+                    emitMetadata="0"
+                    inputPosition="top"
+                    theme={theme}
+                    lang="zh-CN"
+                />
+            ) : null}
+        </div>
+    );
 };
 
 export default Comment;
