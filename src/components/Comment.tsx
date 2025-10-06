@@ -1,5 +1,5 @@
 import Giscus from "@giscus/react";
-import { useState, useEffect, useId } from "react";
+import { useEffect, useId, useState } from "react";
 import { twMerge } from "tailwind-merge";
 
 const Comment = ({ className }: { className?: string }) => {

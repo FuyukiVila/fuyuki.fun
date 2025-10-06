@@ -9,12 +9,12 @@ document.addEventListener("DOMContentLoaded", () => {
             url: path + "assets/waifu-tips.min.js",
             dataType: "script",
             cache: true,
-            success: function () {
+            success: () => {
                 $.ajax({
                     url: path + "assets/live2d.min.js",
                     dataType: "script",
                     cache: true,
-                    success: function () {
+                    success: () => {
                         /* 可直接修改部分参数 */
                         live2d_settings["hitokotoAPI"] = "hitokoto.cn"; // 一言 API
                         live2d_settings["modelId"] = 1; // 默认模型 ID

@@ -1,10 +1,10 @@
 ---
 import { getEntry, render } from "astro:content";
+import Comment from "@components/Comment";
 import Markdown from "@components/misc/Markdown.astro";
 import I18nKey from "../i18n/i18nKey";
 import { i18n } from "../i18n/translation";
 import MainGridLayout from "../layouts/MainGridLayout.astro";
-import Comment from "@components/Comment";
 
 const aboutPost = await getEntry("spec", "about");
 

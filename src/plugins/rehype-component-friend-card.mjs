@@ -39,7 +39,7 @@ export function FriendCardComponent(properties, children) {
     return h(
         "div",
         {
-            class: `flex flex-col rounded-2xl overflow-hidden transition-all duration-300 shadow-md border-2 hover:translate-y-[-5px] hover:shadow-lg w-full`,
+            class: "flex flex-col rounded-2xl overflow-hidden transition-all duration-300 shadow-md border-2 hover:translate-y-[-5px] hover:shadow-lg w-full",
         },
         [
             h("div", { class: "flex flex-row p-5 gap-4 items-center w-full" }, [

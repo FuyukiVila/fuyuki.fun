@@ -1,9 +1,7 @@
 {
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
-        "source.fixAll": "explicit",
-        "quickfix.biome": "always",
-        "source.organizeImports.biome": "always"
+        "source.fixAll.biome": "explicit"
     },
     "frontMatter.dashboard.openOnStart": false,
     "[github-actions-workflow]": {
