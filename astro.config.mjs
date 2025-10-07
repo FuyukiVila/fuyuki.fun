@@ -19,6 +19,7 @@ import remarkMath from "remark-math";
 import remarkSectionize from "remark-sectionize";
 import { expressiveCodeConfig } from "./src/config.ts";
 import { pluginCustomCopyButton } from "./src/plugins/expressive-code/custom-copy-button.ts";
+import { pluginCustomRunButton } from "./src/plugins/expressive-code/custom-run-button.ts";
 import { pluginLanguageBadge } from "./src/plugins/expressive-code/language-badge.ts";
 import { AdmonitionComponent } from "./src/plugins/rehype-component-admonition.mjs";
 import { FriendCardComponent } from "./src/plugins/rehype-component-friend-card.mjs";
@@ -65,6 +66,7 @@ export default defineConfig({
                 pluginLineNumbers(),
                 pluginLanguageBadge(),
                 pluginCustomCopyButton(),
+                pluginCustomRunButton(),
             ],
             defaultProps: {
                 wrap: true,

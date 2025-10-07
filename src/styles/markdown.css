@@ -3,7 +3,12 @@
         @apply text-3xl;
     }
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         .anchor {
             @apply transition -m-0.5 ml-[0.2ch] p-0.5 select-none opacity-0 no-underline !important;
 
@@ -25,8 +30,9 @@
         box-decoration-break: clone;
         -webkit-box-decoration-break: clone;
         display: inline-block;
-    
-        &:hover, &:active {
+
+        &:hover,
+        &:active {
             @apply decoration-transparent;
             background: var(--btn-plain-bg-hover);
             border-bottom: 1px dashed var(--link-hover);
@@ -37,12 +43,13 @@
     code {
         @apply bg-[var(--inline-code-bg)] text-[var(--inline-code-color)] px-1 py-0.5 rounded-md overflow-hidden;
 
-        font-family: 'JetBrains Mono Variable', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+        font-family: "JetBrains Mono Variable", ui-monospace, SFMono-Regular,
+            Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
         &:before {
-            content:none;
+            content: none;
         }
         &:after {
-            content:none;
+            content: none;
         }
 
         counter-reset: line;
@@ -53,7 +60,8 @@
                 counter-increment: line;
                 direction: rtl;
             }
-            &:last-child:empty, &:last-child:has(> span:empty:only-child) {
+            &:last-child:empty,
+            &:last-child:has(> span:empty:only-child) {
                 display: none;
             }
         }
@@ -67,20 +75,62 @@
         opacity: 1;
     }
 
-    .copy-btn-icon {
+    .run-btn {
+        all: initial;
+        @apply btn-regular-dark opacity-0 shadow-lg shadow-black/50 absolute active:scale-90 h-8 w-8 top-3 right-14 text-sm rounded-lg transition-all ease-in-out z-20 cursor-pointer;
+    }
+    .frame:hover .run-btn {
+        opacity: 1;
+    }
+
+    .copy-btn-icon,
+    .run-btn-icon {
         @apply absolute top-1/2 left-1/2 transition -translate-x-1/2 -translate-y-1/2 w-4 h-4 fill-white pointer-events-none;
     }
     .copy-btn .copy-icon {
         @apply opacity-100 fill-white dark:fill-white/75;
     }
     .copy-btn.success .copy-icon {
-        @apply opacity-0 fill-[var(--deep-text)]
+        @apply opacity-0 fill-[var(--deep-text)];
     }
     .copy-btn .success-icon {
         @apply opacity-0 fill-white;
     }
     .copy-btn.success .success-icon {
-        @apply opacity-100
+        @apply opacity-100;
+    }
+
+    .run-btn .run-icon {
+        @apply opacity-100 fill-white dark:fill-white/75;
+    }
+    .run-btn.success .run-icon {
+        @apply opacity-0 fill-[var(--deep-text)];
+    }
+    .run-btn .success-icon {
+        @apply opacity-0 fill-white;
+    }
+    .run-btn.success .success-icon {
+        @apply opacity-100;
+    }
+
+    .code-output {
+        @apply mt-2 p-4 bg-[var(--codeblock-bg)] border border-[var(--btn-regular-bg)];
+        border-radius: 0.75rem;
+        font-family: "JetBrains Mono Variable", ui-monospace, SFMono-Regular,
+            Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+        font-size: 0.875rem;
+    }
+
+    .code-output-title {
+        @apply text-sm font-bold mb-2 text-[var(--primary)];
+    }
+
+    .code-output-content {
+        @apply text-sm whitespace-pre-wrap text-white;
+    }
+
+    .code-output-content.code-output-error {
+        @apply text-red-400;
     }
 
     .expressive-code {
@@ -90,8 +140,8 @@
         }
     }
 
-
-    ul, ol {
+    ul,
+    ol {
         li::marker {
             @apply text-[var(--primary)];
         }
@@ -106,10 +156,10 @@
         }
 
         /* Remove the double quotes from default styles */
-        p:before, p:after {
+        p:before,
+        p:after {
             @apply content-none;
         }
-
     }
 
     .katex-display-container {
@@ -117,5 +167,4 @@
         overflow-x: auto;
         margin: 1em 0;
     }
-    
 }
