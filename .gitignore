@@ -32,4 +32,4 @@ yarn.lock
 *.iml
 
 .vscode/
-.cunzhi/
+.cunzhi-memory/
