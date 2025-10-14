@@ -46,7 +46,7 @@
 .waifu-tool span:hover {
     color: #34495e;
 }
-.waifu #live2d{
+.waifu #live2d {
     position: relative;
 }
 
@@ -247,44 +247,52 @@
         transform: translate(-1.5px, -1.5px) rotate(-0.5deg);
     }
 
-    0%, 100% {
+    0%,
+    100% {
         transform: translate(0, 0) rotate(0);
     }
 }
 @font-face {
-  font-family: 'Flat-UI-Icons';
-  src: url('https://cdn.jsdelivr.net/gh/fuyukivila/live2d_demo@master/assets/flat-ui-icons-regular.eot');
-  src: url('https://cdn.jsdelivr.net/gh/fuyukivila/live2d_demo@master/assets/flat-ui-icons-regular.eot?#iefix') format('embedded-opentype'), url('https://cdn.jsdelivr.net/gh/fuyukivila/live2d_demo@master/assets/flat-ui-icons-regular.woff') format('woff'), url('https://cdn.jsdelivr.net/gh/fuyukivila/live2d_demo@master/assets/flat-ui-icons-regular.ttf') format('truetype'), url('https://cdn.jsdelivr.net/gh/fuyukivila/live2d_demo@master/assets/flat-ui-icons-regular.svg#flat-ui-icons-regular') format('svg');
+    font-family: "Flat-UI-Icons";
+    src: url("https://cdn.jsdelivr.net/gh/fuyukivila/live2d_demo@master/assets/flat-ui-icons-regular.eot");
+    src: url("https://cdn.jsdelivr.net/gh/fuyukivila/live2d_demo@master/assets/flat-ui-icons-regular.eot?#iefix")
+            format("embedded-opentype"),
+        url("https://cdn.jsdelivr.net/gh/fuyukivila/live2d_demo@master/assets/flat-ui-icons-regular.woff")
+            format("woff"),
+        url("https://cdn.jsdelivr.net/gh/fuyukivila/live2d_demo@master/assets/flat-ui-icons-regular.ttf")
+            format("truetype"),
+        url("https://cdn.jsdelivr.net/gh/fuyukivila/live2d_demo@master/assets/flat-ui-icons-regular.svg#flat-ui-icons-regular")
+            format("svg");
 }
 [class^="fui-"],
 [class*="fui-"] {
-  font-family: 'Flat-UI-Icons';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: "Flat-UI-Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 .fui-cross:before {
-  content: "\e609";
+    content: "\e609";
 }
 .fui-info-circle:before {
-  content: "\e60f";
+    content: "\e60f";
 }
 .fui-photo:before {
-  content: "\e62a";
+    content: "\e62a";
 }
 .fui-eye:before {
-  content: "\e62c";
+    content: "\e62c";
 }
 .fui-chat:before {
-  content: "\e62d";
+    content: "\e62d";
 }
 .fui-home:before {
-  content: "\e62e";
+    content: "\e62e";
 }
 .fui-user:before {
-  content: "\e631";
+    content: "\e631";
 }
