@@ -1,12 +1,12 @@
 ---
 title: XCPC板子
 published: 2025-12-16
-description: ''
-image: './yuri.jpg'
+description: ""
+image: "./yuri.jpg"
 tags: [codeforces, ICPC]
-category: 'XCPC'
+category: "XCPC"
 draft: false
-lang: ''
+lang: ""
 top: true
 ---
 
