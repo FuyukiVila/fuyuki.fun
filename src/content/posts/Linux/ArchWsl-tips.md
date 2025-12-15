@@ -7,6 +7,7 @@ tags: [WSL, Arch, wslg]
 category: "Linux"
 draft: false
 lang: ""
+top: true
 ---
 
 #### font

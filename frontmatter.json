@@ -52,6 +52,12 @@
                     "type": "string"
                 },
                 {
+                    "title": "top",
+                    "name": "top",
+                    "type": "boolean",
+                    "default": false
+                },
+                {
                     "title": "draft",
                     "name": "draft",
                     "type": "boolean"
