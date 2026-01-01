@@ -6,12 +6,12 @@ document.addEventListener("DOMContentLoaded", () => {
             '<div class="waifu"><div class="waifu-tips"></div><canvas id="live2d" class="live2d"></canvas><div class="waifu-tool"><span class="fui-home"></span> <span class="fui-chat"></span> <span class="fui-eye"></span> <span class="fui-user"></span> <span class="fui-photo"></span> <span class="fui-info-circle"></span> <span class="fui-cross"></span></div></div>',
         );
         $.ajax({
-            url: path + "assets/waifu-tips.min.js",
+            url: `${path}assets/waifu-tips.min.js`,
             dataType: "script",
             cache: true,
             success: () => {
                 $.ajax({
-                    url: path + "assets/live2d.min.js",
+                    url: `${path}assets/live2d.min.js`,
                     dataType: "script",
                     cache: true,
                     success: () => {
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
             },
         });
-    } catch (err) {
+    } catch (_) {
         console.log("[Error] JQuery is not defined.");
     }
 });
