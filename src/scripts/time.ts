@@ -31,9 +31,7 @@ function setTime() {
     const create_time = Math.round(
         new Date(Date.UTC(2024, 11, 9, 0, 0, 0)).getTime() / 1000,
     );
-    const timestamp = Math.round(
-        (Date.now()+ 8 * 60 * 60 * 1000) / 1000,
-    );
+    const timestamp = Math.round((Date.now() + 8 * 60 * 60 * 1000) / 1000);
     const currentTime = secondToDate(timestamp - create_time);
     const htmerTimeElement = document.getElementById("htmer_time");
     if (htmerTimeElement) {
