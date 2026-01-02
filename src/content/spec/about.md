@@ -40,13 +40,6 @@
 博客内的所有原创内容（包括但不限于文章、图像等）除特别声明外均使用[知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.zh-hans)进行授权，转载请声明来自 [Fuyuki_Vila](https://fuyuki.fun/)
 
 <style>
-    /* 全局样式重置 */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
     /* 卡片容器样式 */
     .card-container {
         display: flex; /* 使用Flexbox布局 */
