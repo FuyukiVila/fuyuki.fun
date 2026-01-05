@@ -57,8 +57,8 @@ importers:
         specifier: ^1.2.50
         version: 1.2.50
       '@iconify/svelte':
-        specifier: ^5.1.0
-        version: 5.1.0(svelte@5.46.1)
+        specifier: ^5.2.1
+        version: 5.2.1(svelte@5.46.1)
       '@swup/astro':
         specifier: ^1.7.0
         version: 1.7.0(@types/babel__core@7.20.5)
@@ -1151,10 +1151,10 @@ packages:
   '@iconify-json/material-symbols@1.2.50':
     resolution: {integrity: sha512-71tjHR70h46LHtBFab3fAd2V/wPTO7JMV5lKnRn3IcF303LaFgAlO0BZeTJDcmCv9d0snRZmnoLZAJVD7/eisw==}
 
-  '@iconify/svelte@5.1.0':
-    resolution: {integrity: sha512-I14nSqo0pNXO5OKsT61ZO3XIPF4yRHA2ErgPsaZ1sPJdKXn80o7o8jOe1xpWphbb9FihdX6by9zlKKBss61mFw==}
+  '@iconify/svelte@5.2.1':
+    resolution: {integrity: sha512-zHmsIPmnIhGd5gc95bNN5FL+GifwMZv7M2rlZEpa7IXYGFJm/XGHdWf6PWQa6OBoC+R69WyiPO9NAj5wjfjbow==}
     peerDependencies:
-      svelte: '>4.0.0'
+      svelte: '>5.0.0'
 
   '@iconify/tools@4.2.0':
     resolution: {integrity: sha512-WRxPva/ipxYkqZd1+CkEAQmd86dQmrwH0vwK89gmp2Kh2WyyVw57XbPng0NehP3x4V1LzLsXUneP1uMfTMZmUA==}
@@ -5183,6 +5183,7 @@ packages:
   whatwg-encoding@3.1.1:
     resolution: {integrity: sha512-6qN4hJdMwfYBtE3YBTTHhoeuUrDBPZmbQaxWAqSALV/MeEnR5z1xd8UKud2RAkFoPkmB+hli1TZSnyi84xz1vQ==}
     engines: {node: '>=18'}
+    deprecated: Use @exodus/bytes instead for a more spec-conformant and faster implementation
 
   whatwg-mimetype@4.0.0:
     resolution: {integrity: sha512-QaKxh0eNIi2mE9p2vEdzfagOKHCcj1pJ56EEHGQOVxp8r9/iszLUUV7v89x9O1p/T+NlTM5W7jW6+cz4Fq1YVg==}
@@ -6437,7 +6438,7 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify/svelte@5.1.0(svelte@5.46.1)':
+  '@iconify/svelte@5.2.1(svelte@5.46.1)':
     dependencies:
       '@iconify/types': 2.0.0
       svelte: 5.46.1
