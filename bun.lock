@@ -20,7 +20,7 @@
         "@iconify-json/fa6-regular": "^1.2.4",
         "@iconify-json/fa6-solid": "^1.2.4",
         "@iconify-json/material-symbols": "^1.2.50",
-        "@iconify/svelte": "^5.1.0",
+        "@iconify/svelte": "^5.2.1",
         "@swup/astro": "^1.7.0",
         "@tailwindcss/typography": "^0.5.19",
         "@vercel/analytics": "^1.6.1",
@@ -429,7 +429,7 @@
 
     "@iconify-json/material-symbols": ["@iconify-json/material-symbols@1.2.50", "https://registry.npmmirror.com/@iconify-json/material-symbols/-/material-symbols-1.2.50.tgz", { "dependencies": { "@iconify/types": "2.0.0" } }, "sha512-71tjHR70h46LHtBFab3fAd2V/wPTO7JMV5lKnRn3IcF303LaFgAlO0BZeTJDcmCv9d0snRZmnoLZAJVD7/eisw=="],
 
-    "@iconify/svelte": ["@iconify/svelte@5.1.0", "https://registry.npmmirror.com/@iconify/svelte/-/svelte-5.1.0.tgz", { "dependencies": { "@iconify/types": "2.0.0" }, "peerDependencies": { "svelte": "5.46.1" } }, "sha512-I14nSqo0pNXO5OKsT61ZO3XIPF4yRHA2ErgPsaZ1sPJdKXn80o7o8jOe1xpWphbb9FihdX6by9zlKKBss61mFw=="],
+    "@iconify/svelte": ["@iconify/svelte@5.2.1", "", { "dependencies": { "@iconify/types": "^2.0.0" }, "peerDependencies": { "svelte": ">5.0.0" } }, "sha512-zHmsIPmnIhGd5gc95bNN5FL+GifwMZv7M2rlZEpa7IXYGFJm/XGHdWf6PWQa6OBoC+R69WyiPO9NAj5wjfjbow=="],
 
     "@iconify/tools": ["@iconify/tools@4.2.0", "https://registry.npmmirror.com/@iconify/tools/-/tools-4.2.0.tgz", { "dependencies": { "@iconify/types": "2.0.0", "@iconify/utils": "2.3.0", "cheerio": "1.1.2", "domhandler": "5.0.3", "extract-zip": "2.0.1", "local-pkg": "1.1.2", "pathe": "2.0.3", "svgo": "3.3.2", "tar": "7.5.2" } }, "sha512-WRxPva/ipxYkqZd1+CkEAQmd86dQmrwH0vwK89gmp2Kh2WyyVw57XbPng0NehP3x4V1LzLsXUneP1uMfTMZmUA=="],
 
