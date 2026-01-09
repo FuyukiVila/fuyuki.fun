@@ -4,8 +4,6 @@ import ButtonMusic from "@components/control/ButtonMusic.astro";
 import Footer from "@components/Footer.astro";
 import Navbar from "@components/Navbar.astro";
 import SideBar from "@components/widget/SideBar.astro";
-import Analytics from "@vercel/analytics/astro";
-import SpeedInsights from "@vercel/speed-insights/astro";
 import type { MarkdownHeading } from "astro";
 import { Icon } from "astro-icon/components";
 import ImageWrapper from "../components/misc/ImageWrapper.astro";
@@ -207,20 +205,4 @@ const mainPanelTop = siteConfig.banner.enable
 
     <!-- Music button -->
     <ButtonMusic />
-    <!-- Analytics -->
-    <Analytics />
-    <!-- Speed Insights -->
-    <SpeedInsights />
 </Layout>
-
-<head>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"
-    ></script>
-</head>
-
-<script>
-    import "../scripts/power";
-    import "../scripts/time";
-    import "../scripts/live2d";
-    import "../scripts/code-runner";
-</script>

@@ -19,6 +19,8 @@ import { defaultFavicons } from "../constants/icon";
 import type { Favicon } from "../types/config";
 import { pathsEqual, url } from "../utils/url-utils";
 import "katex/dist/katex.css";
+import Analytics from "@vercel/analytics/astro";
+import SpeedInsights from "@vercel/speed-insights/astro";
 
 interface Props {
     title?: string;
@@ -185,6 +187,10 @@ const bannerOffset =
             title={profileConfig.name}
             href={`${Astro.site}rss.xml`}
         />
+        <!-- Analytics -->
+        <Analytics />
+        <!-- Speed Insights -->
+        <SpeedInsights />
     </head>
     <body
         class="min-h-screen transition"
@@ -667,4 +673,14 @@ const bannerOffset =
     } else {
         document.addEventListener("swup:enable", setup);
     }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"
+></script>
+
+<script>
+    import "../scripts/power";
+    import "../scripts/time";
+    import "../scripts/live2d";
+    import "../scripts/code-runner";
 </script>
