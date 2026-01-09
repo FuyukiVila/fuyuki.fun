@@ -1,42 +1,33 @@
 <script lang="ts">
 import Giscus from "@giscus/svelte";
-import { onDestroy, onMount } from "svelte";
+import { getCurrentTheme } from "@utils/setting-utils";
+import { onMount } from "svelte";
 import { twMerge } from "tailwind-merge";
+import type { LIGHT_DARK_MODE } from "@/types/config";
 
 let { className = "" }: { className?: string } = $props();
 
-let mounted = $state(false);
-let theme = $state<"light" | "dark">("light");
-
-const getCurrentTheme = (): "light" | "dark" => {
-    return document.documentElement.classList.contains("dark")
-        ? "dark"
-        : "light";
-};
+let theme = $state<LIGHT_DARK_MODE>("light");
 
 onMount(() => {
-    mounted = true;
+    // 初始化主题
     theme = getCurrentTheme();
 
-    // 使用 MutationObserver 监听 DOM 的 class 变化
+    // 监听主题变化
     const observer = new MutationObserver(() => {
         theme = getCurrentTheme();
     });
 
-    // 开始监听 document.documentElement 的属性变化
     observer.observe(document.documentElement, {
         attributes: true,
-        attributeFilter: ["class"], // 只监听 class 属性
+        attributeFilter: ["class"],
     });
 
-    onDestroy(() => {
-        observer.disconnect();
-    });
+    return () => observer.disconnect();
 });
 </script>
 
 <div class={twMerge('mt-8', className)}>
-    {#if mounted}
         <Giscus
             id="comments"
             term="Welcome to fuyuki.fun!"
@@ -52,5 +43,4 @@ onMount(() => {
             theme={theme}
             lang="zh-CN"
         />
-    {/if}
 </div>

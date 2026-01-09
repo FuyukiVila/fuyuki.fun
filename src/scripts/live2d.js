@@ -16,14 +16,14 @@ document.addEventListener("DOMContentLoaded", () => {
                     cache: true,
                     success: () => {
                         /* 可直接修改部分参数 */
-                        live2d_settings["hitokotoAPI"] = "hitokoto.cn"; // 一言 API
-                        live2d_settings["modelId"] = 1; // 默认模型 ID
-                        live2d_settings["modelTexturesId"] =
+                        live2d_settings.hitokotoAPI = "hitokoto.cn"; // 一言 API
+                        live2d_settings.modelId = 1; // 默认模型 ID
+                        live2d_settings.modelTexturesId =
                             Math.floor(Math.random() * 87) + 1; // 默认材质 ID
-                        live2d_settings["modelStorage"] = false; // 不储存模型 ID
-                        live2d_settings["waifuSize"] = "336x300";
-                        live2d_settings["waifuFontSize"] = "14px";
-                        live2d_settings["showToolMenu"] = false;
+                        live2d_settings.modelStorage = false; // 不储存模型 ID
+                        live2d_settings.waifuSize = "336x300";
+                        live2d_settings.waifuFontSize = "14px";
+                        live2d_settings.showToolMenu = false;
                         /* 在 initModel 前添加 */
                         initModel(waifu_tips);
                     },

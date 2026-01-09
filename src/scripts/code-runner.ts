@@ -118,7 +118,7 @@ function runCode(
         // 清除之前的 timeout
         const timeoutId = button.getAttribute("data-timeout-id");
         if (timeoutId) {
-            clearTimeout(Number.parseInt(timeoutId));
+            clearTimeout(Number.parseInt(timeoutId, 10));
         }
 
         button.classList.add("success");
