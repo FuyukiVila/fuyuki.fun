@@ -1,6 +1,6 @@
 ---
 import path from "node:path";
-import Comment from "@components/Comment";
+import Comment from "@components/Comment.svelte";
 import License from "@components/misc/License.astro";
 import Markdown from "@components/misc/Markdown.astro";
 import I18nKey from "@i18n/i18nKey";
@@ -134,6 +134,6 @@ const jsonLd = {
             </div>}
         </a>
     </div>
-    <Comment className="col-span-2 lg:col-span-1 block row-start-2" client:only="react"></Comment>
+    <Comment className="col-span-2 lg:col-span-1 block row-start-2" client:only="svelte"></Comment>
 
 </MainGridLayout>

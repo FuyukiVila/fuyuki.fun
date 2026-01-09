@@ -1,4 +1,3 @@
-import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import svelte from "@astrojs/svelte";
 import tailwind from "@astrojs/tailwind";
@@ -114,7 +113,6 @@ export default defineConfig({
                 Passed: async () => true, // https://github.com/PlayForm/Compress/issues/376
             },
         }),
-        react(),
     ],
 
     markdown: {
