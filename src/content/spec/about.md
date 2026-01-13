@@ -6,7 +6,7 @@
 >
 > **_but the light is not as bright as it had been_**
 
-<center><img src="https://count.getloli.com/@fuyuki.fun?theme=booru-lewd" alt="fuyuki.fun" /></center>
+<img src="https://count.getloli.com/@fuyuki.fun?theme=booru-lewd" alt="fuyuki.fun" style="text-align: center; display: block; margin: 0 auto;" />
 
 # 关于 Blog
 
